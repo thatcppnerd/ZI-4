@@ -177,4 +177,42 @@
       <a name="label" val="INPUT1_2"/>
     </comp>
   </circuit>
+  <circuit name="half_adder">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="half_adder"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(260,280)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="INPUT_0"/>
+    </comp>
+    <comp lib="0" loc="(260,320)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="INPUT_1"/>
+    </comp>
+    <comp lib="0" loc="(440,300)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="RESULT"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(440,370)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="CARRY"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(400,370)" name="AND Gate"/>
+    <comp lib="1" loc="(410,300)" name="XOR Gate"/>
+    <wire from="(260,280)" to="(310,280)"/>
+    <wire from="(260,320)" to="(280,320)"/>
+    <wire from="(280,320)" to="(280,390)"/>
+    <wire from="(280,320)" to="(350,320)"/>
+    <wire from="(280,390)" to="(350,390)"/>
+    <wire from="(310,280)" to="(310,350)"/>
+    <wire from="(310,280)" to="(350,280)"/>
+    <wire from="(310,350)" to="(350,350)"/>
+    <wire from="(400,370)" to="(440,370)"/>
+    <wire from="(410,300)" to="(440,300)"/>
+  </circuit>
 </project>
