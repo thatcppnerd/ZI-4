@@ -87,3 +87,11 @@ $O_1 = 0000_2$
 $O_0 = I_0 \oplus I_1$  
 $O_1 = 0000_2$
 
+
+# Internals
+
+## What happens to the opcode?
+When an input is given in the **OPCODE** selector, it is sent through a de-multiplexer and outputs HIGH on the corresponding pin.  The signal is then diverted to either the normal or alternate **operators**, according to the state of the **ALT_OPCODE** pin.
+
+## What are the operators?
+The operators contain the actual arithmetic circuitry for the ALU.  There are two operators, the normal operator and the alternate operator.  They are
