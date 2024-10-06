@@ -182,6 +182,14 @@
     <a name="circuit" val="half_adder"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect fill="none" height="30" stroke="#000000" width="91" x="50" y="50"/>
+      <circ-anchor facing="east" x="140" y="60"/>
+      <circ-port dir="in" pin="260,280" x="50" y="60"/>
+      <circ-port dir="in" pin="260,320" x="50" y="70"/>
+      <circ-port dir="out" pin="440,300" x="140" y="60"/>
+      <circ-port dir="out" pin="440,370" x="140" y="70"/>
+    </appear>
     <comp lib="0" loc="(260,280)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="INPUT_0"/>
@@ -214,5 +222,54 @@
     <wire from="(310,350)" to="(350,350)"/>
     <wire from="(400,370)" to="(440,370)"/>
     <wire from="(410,300)" to="(440,300)"/>
+  </circuit>
+  <circuit name="full_adder_1_bit">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="full_adder_1_bit"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(160,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="INPUT_0"/>
+    </comp>
+    <comp lib="0" loc="(160,320)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="INPUT_1"/>
+    </comp>
+    <comp lib="0" loc="(160,390)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="CARRY_IN"/>
+    </comp>
+    <comp lib="0" loc="(950,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="SUM"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(950,400)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="CARRY_OUT"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(910,400)" name="OR Gate"/>
+    <comp loc="(490,250)" name="half_adder"/>
+    <comp loc="(810,250)" name="half_adder"/>
+    <wire from="(160,250)" to="(270,250)"/>
+    <wire from="(160,320)" to="(200,320)"/>
+    <wire from="(160,390)" to="(550,390)"/>
+    <wire from="(200,270)" to="(200,320)"/>
+    <wire from="(200,270)" to="(270,270)"/>
+    <wire from="(490,250)" to="(590,250)"/>
+    <wire from="(490,270)" to="(510,270)"/>
+    <wire from="(510,270)" to="(510,420)"/>
+    <wire from="(510,420)" to="(860,420)"/>
+    <wire from="(550,270)" to="(550,390)"/>
+    <wire from="(550,270)" to="(590,270)"/>
+    <wire from="(810,250)" to="(950,250)"/>
+    <wire from="(810,270)" to="(830,270)"/>
+    <wire from="(830,270)" to="(830,380)"/>
+    <wire from="(830,380)" to="(860,380)"/>
+    <wire from="(910,400)" to="(950,400)"/>
   </circuit>
 </project>
