@@ -1,5 +1,5 @@
 # Todos
 
-## CPU
- * 
-## ALU
+### ALU
+* Finish Normal Operator
+* Finish Alternate Operator
