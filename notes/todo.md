@@ -1,0 +1,5 @@
+# Todos
+
+## CPU
+ * 
+## ALU
