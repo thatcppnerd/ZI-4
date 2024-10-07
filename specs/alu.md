@@ -14,9 +14,11 @@
 | OUTPUT 0      | 3 : 0  | 4-bit output                                                                 |
 | OUTPUT 1      | 7 : 4  | 4-bit output                                                                 |
 | CARRY         | 8      | Is set HIGH when output is can't fit into $O_0$ and spills over into $O_1$.  |
-| NEGATIVE      | 9      | Is set when output is negative.                                              |
-| OVERFLOW      | 10     | Is set when integer overflow happens, negatively or positively.              |
-| ZERO          | 11     | Is set when all relevant outputs are zero.                                   |
+| SIGN          | 9      | Is set HIGH when output is negative.                                              |
+| OVERFLOW      | 10     | Is set HIGH when integer overflow happens, negatively or positively.              |
+| ZERO          | 11     | Is set HIGH when all relevant outputs are zero.                                   |
+| EQUAL         | 12     | Is set HIGH when $I_0 = I_1$.
+| LESS/GREATER  | 13     | Is set HIGH when $I_0 \gt I_1$, and set LOW when $I_0 \le I_1$. |
 
 ## Opcode Value Tables
 ### Default (ALT_OPCODE = 0)
@@ -26,7 +28,7 @@
 | 0x1    | SUB       |
 | 0x2    | MUL       |
 | 0x3    | DIV       |
-| 0x4    | NOT       |
+| 0x4    | CMP       |
 | 0x5    | AND       |
 | 0x6    | OR        |
 | 0x7    | XOR       |
@@ -71,9 +73,8 @@ $I_1 = Divisor$
 $O_0 = Quotient = \Large\frac{I_0}{I_1}$  
 $O_1 = Remainder = I_0 \bmod I_1$ 
 
-## NOT
-$O_0 = I_0\prime$  
-$O_1 = I_1\prime$
+## CMP (Compare)
+$Less/Greater =$
 
 ## AND
 $O_0 = I_0 \And I_1$  
