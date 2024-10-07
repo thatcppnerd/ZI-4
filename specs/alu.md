@@ -1,24 +1,25 @@
 # ALU
 
 ## Inputs
-| Name          | Bits   | Description  |
-| ------------- | :----- | ------------------------------------ |
+| Name          | Bits   | Description                                                                                          |
+| ------------- | :----- | ---------------------------------------------------------------------------------------------------- |
 | OPCODE        | 2 : 0  | A 3-bit value representing the desired operation. (See [Opcode Table](#opcode-value-table))          |
 | ALT_OPCODE    | 3      | If this is set HIGH, then ALU will use alternate opcodes (signed arithmetic, bit-shifting ops)       |
 | INPUT 0       | 7 : 4  | 4-bit input                                                                                          |
 | INPUT 1       | 11 : 8 | 4-bit input                                                                                          |
 
 ## Outputs
-| Name          | Bits   | Description                                                                  |
-| ------------- | ------ | -------------                                                                |
-| OUTPUT 0      | 3 : 0  | 4-bit output                                                                 |
-| OUTPUT 1      | 7 : 4  | 4-bit output                                                                 |
-| CARRY         | 8      | Is set HIGH when output is can't fit into $O_0$ and spills over into $O_1$.  |
-| SIGN          | 9      | Is set HIGH when output is negative.                                              |
-| OVERFLOW      | 10     | Is set HIGH when integer overflow happens, negatively or positively.              |
-| ZERO          | 11     | Is set HIGH when all relevant outputs are zero.                                   |
-| EQUAL         | 12     | Is set HIGH when $I_0 = I_1$.
-| LESS/GREATER  | 13     | Is set HIGH when $I_0 \gt I_1$, and set LOW when $I_0 \le I_1$. |
+| Name          | Bits   | Description                                                                          |
+| ------------- | ------ | ------------------------------------------------------------------------------------ |
+| OUTPUT 0      | 3 : 0  | 4-bit output                                                                         |
+| OUTPUT 1      | 7 : 4  | 4-bit output                                                                         |
+| CARRY         | 8      | Is set HIGH when output can't fit into $O_0$ and spills over into $O_1$.             |
+| SIGN          | 9      | Is set HIGH when output is negative.                                                 |
+| OVERFLOW      | 10     | Is set HIGH when integer overflow happens, negatively or positively.                 |
+| ZERO          | 11     | Is set HIGH when all relevant outputs are zero.                                      |
+| EQUAL         | 12     | Is set HIGH when $I_0 = I_1$.                                                        |
+| LESS/GREATER  | 13     | Is set HIGH when $I_0 \gt I_1$, and set LOW when $I_0 \le I_1$.                      |
+| ODD/EVEN      | 14     | Is HIGH when output is **odd**, LOW when output is **even**.
 
 ## Opcode Value Tables
 ### Default (ALT_OPCODE = 0)
