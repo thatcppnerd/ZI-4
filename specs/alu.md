@@ -84,11 +84,17 @@ $O_0 = Quotient = \Large\frac{I_0}{I_1}$
 $O_1 = Remainder = I_0 \bmod I_1$ 
 
 ## CMP (Compare)
-$Less/Greater =$
+$Equal = (I_0 == I_1)$  
+$Less/Greater = I_0 > I_1$  
+$Parity = I_0 \And 1_{16}$
 
 ## AND
 $O_0 = I_0 \And I_1$  
 $O_1 = 0000_2$
+
+### Flags
+$Zero = O_0 = 0$  
+$Parity = O_0 \And 2_{16}$
 
 ## OR
 $O_0 = I_0 \And I_1$  
