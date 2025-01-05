@@ -15,3 +15,19 @@ Full Adders are typically made by chaining many Half Adders together ($R$ connec
 
 
 
+## Signed 4-bit Adder
+
+0 - positive  
+1 - negative
+
+3 bits regular arithmetic  
+1 bit sign
+
+0 is always positive, encoded as $0000_{2}$.
+
+truth table  
+| $I_0$ (3) | $I_0$ (2:0) | $I_1$ (3) | $I_1$ (2:0) | $O_0$ (3) | O_0 (2:0) | Carry |
+| --------- | ----------- | --------- | ----------- | --------  | --------- | ----- |
+| 0 | 000 | 0 | 000 | 0 | 000 | 0 |
+| 0 | 000 | 0 |
+| 1 | 111 | 1 | 111 | 0 | 111 | 1 |
